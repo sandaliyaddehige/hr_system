@@ -30,7 +30,7 @@ const Signup = () => {
 
     setLoading(true);
     try {
-      // Backend එකට දත්ත යැවීම
+      
       const response = await axios.post('http://localhost:5000/api/auth/register', {
         name: formData.name,      
         email: formData.email,
@@ -71,7 +71,7 @@ const Signup = () => {
               <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-indigo-500 transition-colors" />
               <input 
                 type="text" 
-                name="name" // input නම 'name' ලෙස වෙනස් කළා
+                name="name" 
                 placeholder="John Doe"
                 className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/5 focus:bg-white focus:border-indigo-500 transition-all text-sm"
                 value={formData.name}
